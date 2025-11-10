@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+	int a,s,d,f,g;
+	float u;
+	printf("请输入五个整数：");
+	scanf("%d %d %d %d %d",&a,&s,&d,&f,&g);
+	u = (a+s+d+f+g)/5.0;
+	printf("平均值为：%.2f\n",u);
+	return 0;
+}
