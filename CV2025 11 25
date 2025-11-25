@@ -1,0 +1,41 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main()
+{
+	/*int att[3] = { 0 };
+	int i = 0;
+	int sum = 0;
+	for (i = 0; i < 3; i++) {
+		scanf("%d", &att[i]);
+	}
+	for (i = 0; i < 3; i++) {
+		sum = sum + att[i];
+	}
+	int tr = sum;
+	printf("%d", tr);*/
+	/*int i = 1;
+	int sum = 0;
+	for (i = 1; i <=100; i++) {
+		sum = sum + i;
+	}
+	printf("%d", sum);*/
+	int arr[5] = { 0 };
+	int i, j, min;
+	for (i = 0; i < 5; i++) {
+		scanf("%d", &arr[i]);
+	}
+	min = arr[0];
+	for (i = 0; i < 4; i++) {
+		for (j = 0; j < 4 - i; j++) {
+			if (arr[j] < arr[j + 1])
+			{
+				min = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = min;
+			}
+		}
+	}
+	for (i = 0; i < 5; i++)
+		printf("%d ", arr[i]);
+	return 0;
+}
